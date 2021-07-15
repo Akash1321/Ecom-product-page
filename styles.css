@@ -1,6 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
 
-:root{
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://example.com/MaterialIcons-Regular.eot);
+    /* For IE6-8 */
+    src: local('Material Icons'),
+        local('MaterialIcons-Regular'),
+        url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+        url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+        url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+.material-icons-outlined {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 20px;
+    /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    margin-bottom: 4px;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+
+:root {
     font-family: inter, sans-serif;
     --text-primary: #19191D;
     --text-secondary: #2264D1;
@@ -9,25 +50,36 @@
     --gray-50: #787885;
 }
 
-nav{
+body,
+html {
     margin: 0;
     padding: 0;
-    width: 100%;
+
+}
+
+nav {
+    margin: 0px 16px;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 1920px;
     height: 80px;
     font-size: 16px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    
+
 }
 
-#logo-part{
+#logo-part {
     display: flex;
     align-items: center;
 
 }
 
-#the-logo{
+#the-logo {
     max-width: 200px;
     width: 120px;
     height: 40px;
@@ -35,12 +87,9 @@ nav{
     margin-right: 1px;
 }
 
-#logo-part div{
-    
+#logo-part div {}
 
-}
-
-.Intro-links{
+.Intro-links {
 
     color: var(--gray-60);
     text-decoration: none;
@@ -50,17 +99,17 @@ nav{
 
 }
 
-#search-bar{
-    background-color: #EDEDF0 ;
+#search-bar {
+    background-color: #EDEDF0;
     width: 24rem;
     height: 48px;
     display: flex;
     align-items: center;
     border-radius: 99px 99px 99px 99px;
-    
+
 }
 
-.fa-search{
+.fa-search {
     margin: 0;
     margin-left: 15px;
     color: #4d4d92;
@@ -69,53 +118,135 @@ nav{
 
 }
 
-#search{
+#search {
     width: 20rem;
     height: 30px;
     margin: 0;
-    margin-left: 6px; 
+    margin-left: 6px;
     color: var(--text-primary);
     border: none;
     outline: none;
     background: transparent;
 }
 
-.nav-list{
+.nav-list {
     margin: 0;
     padding: 0;
     list-style: none;
     display: flex;
-    justify-content: flex-start;;
+    justify-content: flex-start;
+    ;
     align-items: center;
 }
 
-.nav-but{
+.nav-but {
     margin-left: 18px;
     border: solid 1px #9DC2FF;
     padding: 4px 8px;
     font-weight: 700;
     border-radius: 4px;
     box-shadow: 0px 4px 8px rgba(41, 121, 255, 0.2)
-    
 }
 
-.nav-list .nav-items .nav-link{
+.nav-list .nav-items .nav-link {
     margin: 0;
     text-decoration: none;
     color: var(--text-secondary);
 }
 
-#con-link{
+#con-link {
+    padding: 4px 8px;
     margin-right: 90px;
+}
+
+
+#profile {
+    padding: 16px;
+    /* margin-right: 16px; */
+}
+
+
+
+
+#profile-img {
+
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+
+}
+
+#categories {
+    margin: 80px auto;
+    padding: 16px 0px;
+    max-width: 1440px;
+    width: 100%;
+
+}
+
+
+#categories-list {
+    margin: 0px 40px;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    font-size: 12px;
+}
+
+.category-link {
+    padding: 8px 4px 4px 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #787885;
+}
+
+.category-link:hover {
+    background-color: #EBF2FF;
+}
+
+.category-text {
+    display: block;
+}
+
+.active-category {
+    color: #2979FF;
 }
 
 
 
 
 
-#profile-img{
-    margin-right: 16px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+#product-listing{
+    border: solid 1px #000000;
+    max-width: 1120px;
+    width: 64vw;
+    margin-left: 26vw;
+    font-size: 12px;
+}
+
+
+#priorities{
+    display: flex;
+    align-items: center;
+    
+}
+
+
+#view-options{
+    padding: 0;
+    border: solid 1px #000000;
+    display: flex;
+    list-style: none;
+}
+
+#view-div{
+    padding: 0;
+    border: solid 1px #000000;
+    display: flex;
+    list-style: none;
+
 }
