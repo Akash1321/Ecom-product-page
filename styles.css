@@ -50,10 +50,14 @@
     --gray-50: #787885;
 }
 
+
+
 body,
 html {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    
 
 }
 
@@ -178,10 +182,11 @@ nav {
 }
 
 #categories {
-    margin: 80px auto;
+    margin: 80px auto 0 auto;
     padding: 16px 0px;
     max-width: 1440px;
     width: 100%;
+    box-sizing: border-box;
 
 }
 
@@ -202,6 +207,7 @@ nav {
     align-items: center;
     text-decoration: none;
     color: #787885;
+    
 }
 
 .category-link:hover {
@@ -217,36 +223,202 @@ nav {
 }
 
 
-
-
-
 #product-listing{
-    border: solid 1px #000000;
+    box-sizing: border-box;
     max-width: 1120px;
-    width: 64vw;
-    margin-left: 26vw;
-    font-size: 12px;
+    border: black 1px solid;
+    margin: 0 40px 0 25vw;
 }
 
-
 #priorities{
+    margin-top: 24px;
+    padding: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+#sorting{
+    max-width: 500px;
+    width: 100%;
     display: flex;
     align-items: center;
+    margin: 16px 0px 0px 16px;
+
+}
+
+#priorities *, *::after, *::before {
+    box-sizing: border-box;
+}
+
+#sorting div select{
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    font-size: inherit;
+    font-family: inherit;
+    line-height: inherit;
+    cursor: inherit;
+    outline: none;
+}
+
+.select{
+    position: relative;
+    width: 100%;
+    min-width: 156px;
+    
+    border: 1px solid #B4B4BB;
+    border-radius: 4px;
+    padding: 8px 12px;
+    margin: 0px 16px 0px 0px;
+    font-size: 14px;
+    cursor: pointer;
+    line-height: 140%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* display: grid;
+    grid-template-areas: "select";
+    align-items: center; */
+
+}
+
+.select::after{
+    content: "";
+    width: 12px;
+    height: 6px;
+    background-color: #787885;
+    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+}
+
+/* #sorting div select, .select:after{
+    grid-area: select;
+}
+
+.select:after{
+    justify-self: end;
+} */
+
+#sorting div select:focus + .focus{
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    border: 2px solid blue;
+    border-radius: inherit;
+   
+}
+
+#useless{
+   
+    color: #19191D;
+    font-weight: 700;
+    border: 1px solid #5A5B6A;
+}
+
+#view-options-div{
+    margin: 16px 0px 0px 50px;
+}
+
+.view-options{
+    margin: 0;
+    width: 100%;
+    min-width: 260px;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    background-color: #EBF2FF;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #5A5B6A;
+    
+    
+
+}
+
+.blue{
+    padding: 10px 12px;
+    list-style: none;
+    background-color: #EBF2FF;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #5A5B6A;
+    
     
 }
 
-
-#view-options{
-    padding: 0;
-    border: solid 1px #000000;
-    display: flex;
-    list-style: none;
+.high{
+    background-color: white;
+    color: #2264D1;
+    box-shadow: 0px 2px 4px rgba(41, 121, 255, 0.24);
+    box-shadow: 0px 1px 2px rgba(27, 78, 163, 0.24);
+    font-weight: 700;
 }
 
-#view-div{
-    padding: 0;
-    border: solid 1px #000000;
-    display: flex;
-    list-style: none;
+#last{
+    margin: 16px 16px 0px 16px;
+    /* border: black 1px solid; */
+}
 
+.view-div{
+    width: 100%;
+    min-width: 72;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    font-size: 24px;
+    color: #787885;
+    background-color: #EBF2FF;
+    border-radius: 4px;
+    /* border: black 1px solid; */
+
+
+}
+
+.view-div li{
+    padding: 2px 20px;
+    /* border: black 1px solid; */
+}
+
+/* .view-div li a{
+    
+    padding: 0;
+    margin: 0;
+    border: black 1px solid;
+} */
+
+#view-icon{
+    font-size: 24px;
+    padding: 0 ;
+    margin-top: 4px;
+    /* border: black 1px solid; */
+}
+
+.grid-link{
+   
+    padding: 0;
+    margin: 0;
+    /* border: black 1px solid; */
+
+}
+
+.grid-highlight{
+    background-color: white;
+    color: #2264D1;
+    box-shadow: 0px 2px 4px rgba(41, 121, 255, 0.24);
+    box-shadow: 0px 1px 2px rgba(27, 78, 163, 0.24);
+    border-radius: 4px;
+    
 }
